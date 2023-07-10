@@ -14,19 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.3779707
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.099999666
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -8.959802
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 961a5dc9ce0c5684f84d4691878f69dd, type: 2}
-  _rb: {fileID: 2228684717705157908}
-  _modelTransform: {fileID: 6601729825917681455}
+  pointData: {fileID: 11400000, guid: b916994af35e1d94597d677c4bc891cf, type: 2}
+  objectPool: {fileID: 0}
+  rb: {fileID: 2228684717705157908}
+  modelTransform: {fileID: 6601729825917681455}
   "\u0131nput": {fileID: 11400000, guid: 6344fe54e01b0c34dbeeb2ab06cdb4c5, type: 2}
