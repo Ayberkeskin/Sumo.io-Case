@@ -10,9 +10,9 @@ namespace Input
 
         private void Update()
         {
-            ýnput.Horizontal = joystick.Horizontal;
-            ýnput.Vertical = joystick.Vertical;
-            ýnput.Direction = new Vector3(ýnput.Horizontal,0, ýnput.Vertical);
+                ýnput.Horizontal = joystick.Horizontal;
+                ýnput.Vertical = joystick.Vertical;
+                ýnput.Direction = new Vector3(ýnput.Horizontal, 0, ýnput.Vertical);    
         }
     }
 

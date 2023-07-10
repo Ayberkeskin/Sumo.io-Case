@@ -10,6 +10,7 @@ public class StartPanel : MonoBehaviour
     [SerializeField] private int countDownTime;
 
     [SerializeField] private TextMeshProUGUI countDownDisplay;
+    [SerializeField] private Canvas _startPanel;
 
 
     private void Start()
@@ -31,9 +32,10 @@ public class StartPanel : MonoBehaviour
         countDownDisplay.text = "GO!";
 
         _gameManager.isStart = true;
-
+        _startPanel.enabled = false;
         yield return new WaitForSeconds(1f);
 
         countDownDisplay.gameObject.SetActive(false);
+        
     }
 }
