@@ -12,9 +12,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2153563947791919266, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+      propertyPath: m_TagString
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -96,4 +100,6 @@ MonoBehaviour:
   objectPool: {fileID: 0}
   rb: {fileID: 2228684717705157908}
   modelTransform: {fileID: 6601729825917681455}
+  animator: {fileID: 0}
   "\u0131nput": {fileID: 11400000, guid: 6344fe54e01b0c34dbeeb2ab06cdb4c5, type: 2}
+  _gameManager: {fileID: 0}

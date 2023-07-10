@@ -12,9 +12,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2153563947791919266, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6746894728255046776, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,6 +68,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4911532659050203759}
   m_SourcePrefab: {fileID: 100100000, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+--- !u!95 &1143422457531750823 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5247885225988307156, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+  m_PrefabInstance: {fileID: 5119039596900901235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &3039441204722990328 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7864473281869192587, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
@@ -91,6 +100,7 @@ MonoBehaviour:
   objectPool: {fileID: 0}
   rb: {fileID: 3039441204722990328}
   modelTransform: {fileID: 8024760402807496387}
+  animator: {fileID: 1143422457531750823}
 --- !u!4 &8024760402807496387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2907027886728413104, guid: fda40d4500de363479b125b9fa56e71c, type: 3}

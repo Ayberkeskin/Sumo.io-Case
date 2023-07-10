@@ -12,5 +12,8 @@ public class EnemyController : CharacterController
         
     }
 
-   
+    protected override void Attack(Collision collision)
+    {
+        
+    }
 }

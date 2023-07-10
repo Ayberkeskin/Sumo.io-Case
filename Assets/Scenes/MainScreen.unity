@@ -192,6 +192,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5921704570327169079, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1649629296}
+    - target: {fileID: 5921704570327169079, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
       propertyPath: objectPool
       value: 
       objectReference: {fileID: 1664358126}
@@ -522,6 +526,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4911532659050203759, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1660974748}
     - target: {fileID: 4911532659050203759, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: objectPool
       value: 
@@ -983,6 +991,16 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1649629296 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4259811475133626443, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
+  m_PrefabInstance: {fileID: 236288256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1660974748 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1143422457531750823, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+  m_PrefabInstance: {fileID: 605198922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1664358126 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1037658514930287591, guid: ce07f495ac29d904fa6fe6b8fa6c0720, type: 3}
