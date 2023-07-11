@@ -15,7 +15,6 @@ public class GamePanel : MonoBehaviour
     private void Awake()
     {
         _skore.text = _playerController.playerScore.ToString();
-        _aliveCount.text = _gameManager.aliveCount.ToString();
 
     }
     private void FixedUpdate()
@@ -25,5 +24,6 @@ public class GamePanel : MonoBehaviour
             _gamePanel.SetActive(true);
         }
         _skore.text = _playerController.playerScore.ToString();
+        _aliveCount.text =_gameManager.aliveCount.ToString();
     }
 }

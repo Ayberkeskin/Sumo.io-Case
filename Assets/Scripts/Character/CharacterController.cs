@@ -19,7 +19,7 @@ public abstract class CharacterController : MonoBehaviour
     public float _totalScore=0;
 
     public int _power = 300;
-     
+
     private void FixedUpdate()
     {
         Move();
@@ -53,6 +53,7 @@ public abstract class CharacterController : MonoBehaviour
     protected virtual void Death()
     {
         Destroy(gameObject);
+        GameObject.FindObjectOfType<GameManager>().aliveCount -= 1;
 
     }
     private void OnCollisionExit(Collision collision)

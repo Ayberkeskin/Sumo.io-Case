@@ -18,6 +18,7 @@ public class EnemyController : CharacterController
 
     private void FixedUpdate()
     {
+
         Search();
         Move();
     }

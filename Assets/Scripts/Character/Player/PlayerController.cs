@@ -54,7 +54,7 @@ public class PlayerController : CharacterController
         {
             animator.SetBool(CharacterAnimationsStrings.MoveStr,true);
             Look(ýnput.Direction);
-            rb.velocity = (modelTransform.forward * characterData.MoveSpeed) + (Vector3.up * rb.velocity.y);
+            rb.velocity = (modelTransform.forward * (characterData.MoveSpeed+2)) + (Vector3.up * rb.velocity.y);
         }
     }
 

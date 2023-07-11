@@ -71,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2153563947791919266, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4911532659050203759}
+    - targetCorrespondingSourceObject: {fileID: 280424939663802538, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1690301941786878484}
   m_SourcePrefab: {fileID: 100100000, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
 --- !u!95 &1143422457531750823 stripped
 Animator:
@@ -82,6 +85,23 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7864473281869192587, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
   m_PrefabInstance: {fileID: 5119039596900901235}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4966977374236025305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 280424939663802538, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
+  m_PrefabInstance: {fileID: 5119039596900901235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1690301941786878484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4966977374236025305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f0c255bf42a324e9c895236594a4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6550631223601285585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2153563947791919266, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
@@ -105,20 +125,16 @@ MonoBehaviour:
   rb: {fileID: 3039441204722990328}
   modelTransform: {fileID: 8024760402807496387}
   animator: {fileID: 1143422457531750823}
+  _totalScore: 0
   _power: 200
-  groundCheckDistance: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
   _gameManager: {fileID: 0}
-  _agent: {fileID: 0}
-  _radius: 50
-  _enemy: []
-  _points: []
-  _target: {fileID: 0}
+  targets: []
+  points: []
   _layer:
     serializedVersion: 2
     m_Bits: 200
+  targetEnemy: {fileID: 0}
+  targetPoint: {fileID: 0}
 --- !u!4 &8024760402807496387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2907027886728413104, guid: fda40d4500de363479b125b9fa56e71c, type: 3}
