@@ -31,6 +31,7 @@ public class TimeController : MonoBehaviour
             }
         }
     }
+    // Geri sayým metnini güncelle
     void updateTimer(float time)
     {
         time -= 1;

@@ -24,12 +24,16 @@ public abstract class CharacterController : MonoBehaviour
     {
         Move();
     }
+    // Karakteri hareket ettir
     protected abstract void Move();
 
+    // Karakterin saldýrýsýný gerçekleþtir
     protected abstract void Attack(Collision collision);
 
+    // Karakterin bakýþ yönünü ayarla
     protected abstract void Look(Vector3 lookDirection);
 
+    // Güç seviyesini arttýr (Ortak olduðu için virtual)
     protected virtual void PowerUp()
     {
         _totalScore += pointData.Score;
@@ -50,6 +54,7 @@ public abstract class CharacterController : MonoBehaviour
             _power = 900;
         }
     }
+    // Karakter ölümü(Ortak olduðu için virtual)
     protected virtual void Death()
     {
         Destroy(gameObject);

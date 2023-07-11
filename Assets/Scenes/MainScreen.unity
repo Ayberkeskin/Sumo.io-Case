@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2700324034120332622, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
       propertyPath: m_text
-      value: Player
+      value: Ayberk
       objectReference: {fileID: 0}
     - target: {fileID: 2700324034120332622, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
       propertyPath: m_fontStyle
@@ -1410,6 +1410,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: Ensar
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1778,6 +1782,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: "\u0130layda"
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2001,6 +2009,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: Ahmet
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2199,6 +2211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: "\xD6mer"
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2909,6 +2925,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: Faruk
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3432,6 +3452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: "Ay\u015Fe"
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3939,6 +3963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214033299}
     m_Modifications:
+    - target: {fileID: 1277572294560683170, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
+      propertyPath: m_text
+      value: Buket
+      objectReference: {fileID: 0}
     - target: {fileID: 1921825817209791755, guid: 2dc19275d6cc78648891dc019907c6b2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4495,6 +4523,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477864222499953967, guid: 67c0c730109f04c4e849f8940bc01acf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462094533546066290, guid: 67c0c730109f04c4e849f8940bc01acf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462094534976404325, guid: 67c0c730109f04c4e849f8940bc01acf, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7311322813388180717, guid: 67c0c730109f04c4e849f8940bc01acf, type: 3}

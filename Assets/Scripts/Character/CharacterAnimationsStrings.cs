@@ -1,3 +1,4 @@
+//animasyon geçiþleri için
 public class CharacterAnimationsStrings
 {
     public const string MoveStr = "Move";

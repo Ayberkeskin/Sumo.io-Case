@@ -18,6 +18,7 @@ public class StartPanel : MonoBehaviour
         StartCoroutine(CountdownToStart());
     }
 
+    // Oyun baþýnda 3 den geriye sayým
     IEnumerator CountdownToStart()
     {
         while (countDownTime > 0)

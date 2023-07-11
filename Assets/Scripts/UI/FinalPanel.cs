@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinalPanel : MonoBehaviour
 {
+    [Header("Deðiþkenler")]
     [SerializeField] private GameObject _finalPanel;
     [SerializeField] private GameManager _gameManager;
 
@@ -15,6 +16,7 @@ public class FinalPanel : MonoBehaviour
             _finalPanel.SetActive(true);
         }
     }
+    // Oyunu yeniden baþlat
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

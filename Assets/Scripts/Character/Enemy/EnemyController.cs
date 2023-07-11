@@ -79,7 +79,7 @@ public class EnemyController : CharacterController
             transform.LookAt(lookDirection);
         }
     }
-
+    // Düþmanýn hedeflerini aramak için fonksiyon
     private void Search()
     {
         int random = Random.Range(0, 2);
@@ -94,6 +94,7 @@ public class EnemyController : CharacterController
 
         Transform nearestTransform = FindNearestTransform(hitCount);
     }
+    // En yakýn hedefi bulan foksiyon
     private Transform FindNearestTransform(int hitCount)
     {
         Transform nearestTransform = raycastHits[0].transform;
@@ -113,6 +114,8 @@ public class EnemyController : CharacterController
         targetPoint = nearestTransform.gameObject;
         return nearestTransform;
     }
+
+    // En yakýn düþmaný bulan foksiyon
     private Transform FindNearestEnemy(int count)
     {
         if (targets[0].gameObject != null)

@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(aliveCount);
     }
 
+    //Oyunu bitiren fonksiyon
     private void FinishGame()
     {
         if (aliveCount == 1 || timeController.timeLeft == 0)

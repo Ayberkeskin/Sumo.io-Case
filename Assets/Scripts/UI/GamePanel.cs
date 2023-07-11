@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GamePanel : MonoBehaviour
 {
+    [Header("Deðiþkenler")]
     [SerializeField] private GameObject _gamePanel;
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private PlayerController _playerController;
-
+    [Header("Textler")]
     [SerializeField] private TextMeshProUGUI _aliveCount;
     [SerializeField] private TextMeshProUGUI _skore;
 
     [SerializeField] private GameObject _pausePanel;
-
+    [Header("Butonlar")]
     [SerializeField] private Button _pauseBtn;
     [SerializeField] private Button _resummeBtn;
     [SerializeField] private Button _restartBtn;
@@ -32,16 +33,19 @@ public class GamePanel : MonoBehaviour
         _skore.text = _playerController.playerScore.ToString();
         _aliveCount.text = _gameManager.aliveCount.ToString();
     }
+    // Oyunu duraklat
     public void PauseGame()
     {
         Time.timeScale = 0f;
         _pausePanel.SetActive(true);
     }
+    // Oyunu devam ettir
     public void RessumeGame()
     {
         Time.timeScale = 1f;
         _pausePanel.SetActive(false);
     }
+    // Oyunu yeniden baþlat
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
