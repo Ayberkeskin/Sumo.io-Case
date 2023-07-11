@@ -11,22 +11,29 @@ public class PlayerController : CharacterController
 
     protected override void Attack(Collision collision)
     {
-        if (_power>collision.gameObject.GetComponent<CharacterController>()._power)
+        if (this.gameObject.GetComponent<CharacterController>()._power>collision.gameObject.GetComponent<CharacterController>()._power)
         {
-            collision.rigidbody.AddForce(-(transform.position - collision.transform.position) * _power * Time.deltaTime, ForceMode.Impulse);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(-(transform.position - collision.transform.position) * 2000f * Time.deltaTime, ForceMode.Impulse);
         }
-        else if (_power == collision.gameObject.GetComponent<CharacterController>()._power)
+        else if (this.gameObject.GetComponent<CharacterController>()._power == collision.gameObject.GetComponent<CharacterController>()._power)
         {
-            collision.rigidbody.AddForce(Vector3.zero);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(-(transform.position - collision.transform.position) * 1200f * Time.deltaTime, ForceMode.Impulse);
+            gameObject.GetComponent<Rigidbody>().AddForce(-(collision.transform.position - transform.position) * 1200f * Time.deltaTime, ForceMode.Impulse);
         }
-        else
+        else if (this.gameObject.GetComponent<CharacterController>()._power < collision.gameObject.GetComponent<CharacterController>()._power)
         {
-            rb.AddForce(-(transform.position - collision.transform.position) * _power * Time.deltaTime, ForceMode.Impulse);
+            gameObject.GetComponent<Rigidbody>().AddForce(-(collision.transform.position - transform.position) * 2000f * Time.deltaTime, ForceMode.Impulse);
         }
-        
         StartCoroutine(PlayerAttack());
     }
 
+
+    IEnumerator PlayerAttack()
+    {
+        animator.SetBool(CharacterAnimationsStrings.AttackStr, true);
+        yield return new WaitForSeconds(.3f);
+        animator.SetBool(CharacterAnimationsStrings.AttackStr, false);
+    }
     protected override void Look(Vector3 lookDirection)
     {
         if (_gameManager.isStart)
@@ -45,12 +52,18 @@ public class PlayerController : CharacterController
         }
     }
 
-    IEnumerator PlayerAttack()
+
+    private void OnCollisionEnter(Collision collision)
     {
-        animator.SetBool(CharacterAnimationsStrings.AttackStr, true);
-        yield return new WaitForSeconds(.3f);
-        animator.SetBool(CharacterAnimationsStrings.AttackStr, false);
+        if (collision.gameObject.tag == "Point")
+        {
+            PowerUp();
+            objectPool.SetPoolObject(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "enemy")
+        {
+            Attack(collision);
+        }
     }
-    
 
 }

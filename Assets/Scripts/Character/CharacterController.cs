@@ -18,7 +18,7 @@ public abstract class CharacterController : MonoBehaviour
 
     private float _totalScore=0;
 
-    public int _power = 200;
+    public int _power = 300;
      
     private void FixedUpdate()
     {
@@ -37,31 +37,19 @@ public abstract class CharacterController : MonoBehaviour
         if (_totalScore >= 500 && _totalScore < 1000)
         {
             gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-            _power = 400;
+            _power = 500;
         }
         else if (_totalScore >= 1000 && _totalScore < 1500)
         {
             gameObject.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
-            _power = 600;
+            _power = 700;
         }
         else if (_totalScore >= 1500)
         {
             gameObject.transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
-            _power = 800;
+            _power = 900;
         }
     }
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Point")
-        {
-            PowerUp();
-            objectPool.SetPoolObject(collision.gameObject);
-        }  
-        else if (collision.gameObject.tag == "enemy")
-        {
-            Attack(collision);
-        }
-    }
+   
 }
