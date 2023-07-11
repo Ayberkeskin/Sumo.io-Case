@@ -1,6 +1,5 @@
 using Input;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -8,6 +7,7 @@ public class PlayerController : CharacterController
 {
     [SerializeField] InputData ýnput;
     [SerializeField] GameManager _gameManager;
+    [SerializeField] private CinemaMachineController cinemaMachineController;
     public float playerScore;
 
     private void Update()
@@ -18,15 +18,18 @@ public class PlayerController : CharacterController
     {
         if (this.gameObject.GetComponent<CharacterController>()._power > collision.gameObject.GetComponent<CharacterController>()._power)
         {
+            cinemaMachineController.SetCameraShake();
             collision.gameObject.GetComponent<Rigidbody>().AddForce(-(transform.position - collision.transform.position) * 2000f * Time.deltaTime, ForceMode.Impulse);
         }
         else if (this.gameObject.GetComponent<CharacterController>()._power == collision.gameObject.GetComponent<CharacterController>()._power)
         {
+            cinemaMachineController.SetCameraShake();
             collision.gameObject.GetComponent<Rigidbody>().AddForce(-(transform.position - collision.transform.position) * 1200f * Time.deltaTime, ForceMode.Impulse);
             gameObject.GetComponent<Rigidbody>().AddForce(-(collision.transform.position - transform.position) * 1200f * Time.deltaTime, ForceMode.Impulse);
         }
         else if (this.gameObject.GetComponent<CharacterController>()._power < collision.gameObject.GetComponent<CharacterController>()._power)
         {
+            cinemaMachineController.SetCameraShake();
             gameObject.GetComponent<Rigidbody>().AddForce(-(collision.transform.position - transform.position) * 2000f * Time.deltaTime, ForceMode.Impulse);
         }
         StartCoroutine(PlayerAttack());

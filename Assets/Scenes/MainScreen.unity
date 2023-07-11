@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5921704570327169079, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
+      propertyPath: cinemaMachineController
+      value: 
+      objectReference: {fileID: 963194230}
     - target: {fileID: 7938481895972333629, guid: ecc9465947c00c1409d3153f302a2365, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1287,6 +1291,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1402,6 +1407,20 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631cdbf1661e3794f97c69b259efe4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineVirtualCamera: {fileID: 2034162794}
+  Player: {fileID: 1208122992}
 --- !u!1001 &1040710237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,6 +1581,7 @@ GameObject:
   - component: {fileID: 1101147227}
   - component: {fileID: 1101147230}
   - component: {fileID: 1101147231}
+  - component: {fileID: 1101147232}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1639,6 +1659,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1101147232
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101147226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 10
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1119626286
 GameObject:
   m_ObjectHideFlags: 0
