@@ -16,7 +16,7 @@ public class PlayerController : CharacterController
     }
     protected override void Attack(Collision collision)
     {
-        if (this.gameObject.GetComponent<CharacterController>()._power>collision.gameObject.GetComponent<CharacterController>()._power)
+        if (this.gameObject.GetComponent<CharacterController>()._power > collision.gameObject.GetComponent<CharacterController>()._power)
         {
             collision.gameObject.GetComponent<Rigidbody>().AddForce(-(transform.position - collision.transform.position) * 2000f * Time.deltaTime, ForceMode.Impulse);
         }
@@ -49,12 +49,12 @@ public class PlayerController : CharacterController
 
     protected override void Move()
     {
-        
+
         if (_gameManager.isStart)
         {
-            animator.SetBool(CharacterAnimationsStrings.MoveStr,true);
+            animator.SetBool(CharacterAnimationsStrings.MoveStr, true);
             Look(ýnput.Direction);
-            rb.velocity = (modelTransform.forward * (characterData.MoveSpeed+2)) + (Vector3.up * rb.velocity.y);
+            rb.velocity = (modelTransform.forward * (characterData.MoveSpeed + 2)) + (Vector3.up * rb.velocity.y);
         }
     }
 

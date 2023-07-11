@@ -20,9 +20,9 @@ public class StartPanel : MonoBehaviour
 
     IEnumerator CountdownToStart()
     {
-        while (countDownTime>0)
+        while (countDownTime > 0)
         {
-            countDownDisplay.text=countDownTime.ToString();
+            countDownDisplay.text = countDownTime.ToString();
 
             yield return new WaitForSeconds(1f);
 
@@ -36,6 +36,6 @@ public class StartPanel : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         countDownDisplay.gameObject.SetActive(false);
-        
+
     }
 }

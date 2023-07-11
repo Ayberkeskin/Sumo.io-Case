@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
 
 
 
+
     public bool isStart;
 
-     public  int aliveCount ;
+    public bool isEnd = false;
+
+    public int aliveCount;
 
     private void Awake()
     {
@@ -27,14 +30,15 @@ public class GameManager : MonoBehaviour
 
     private void FinishGame()
     {
-        if (aliveCount == 1|| timeController.timeLeft==0)
+        if (aliveCount == 1 || timeController.timeLeft == 0)
         {
             animator.SetBool(CharacterAnimationsStrings.MoveStr, false);
             animator.SetBool(CharacterAnimationsStrings.WinStr, true);
             isStart = false;
             timeController.timerOn = false;
+            isEnd = true;
 
         }
-        
+
     }
 }

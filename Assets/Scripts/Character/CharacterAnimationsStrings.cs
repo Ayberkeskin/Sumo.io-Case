@@ -1,4 +1,4 @@
-public class CharacterAnimationsStrings 
+public class CharacterAnimationsStrings
 {
     public const string MoveStr = "Move";
 

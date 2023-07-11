@@ -56,21 +56,21 @@ public class EnemyController : CharacterController
         {
             animator.SetBool(CharacterAnimationsStrings.MoveStr, true);
             transform.Translate(Vector3.forward * characterData.MoveSpeed * Time.fixedDeltaTime);
-            if (gameObject != null && gameObject.GetComponent<CharacterController>() != null && targetEnemy != null && gameObject.GetComponent<CharacterController>()._power> targetEnemy.GetComponent<CharacterController>()._power)
+            if (gameObject != null && gameObject.GetComponent<CharacterController>() != null && targetEnemy != null && gameObject.GetComponent<CharacterController>()._power > targetEnemy.GetComponent<CharacterController>()._power)
             {
-                 look = new Vector3(targetEnemy.gameObject.transform.position.x, 0, targetEnemy.gameObject.transform.position.z);
-                
+                look = new Vector3(targetEnemy.gameObject.transform.position.x, 0, targetEnemy.gameObject.transform.position.z);
+
             }
             else
             {
-                 look = new Vector3(targetPoint.transform.position.x, 0, targetPoint.transform.position.z);
+                look = new Vector3(targetPoint.transform.position.x, 0, targetPoint.transform.position.z);
             }
 
             Look(look);
         }
     }
 
-   
+
 
     protected override void Look(Vector3 lookDirection)
     {
@@ -87,7 +87,7 @@ public class EnemyController : CharacterController
         if (hitCount < 0)
         {
             targetEnemy = null;
-            targetPoint=null;
+            targetPoint = null;
             return;
         }
 
@@ -108,14 +108,14 @@ public class EnemyController : CharacterController
             {
                 nearestTransform = nextTransform;
             }
-            
+
         }
         targetPoint = nearestTransform.gameObject;
         return nearestTransform;
     }
-    private Transform FindNearestEnemy(int count) 
+    private Transform FindNearestEnemy(int count)
     {
-        if (targets[0].gameObject!=null)
+        if (targets[0].gameObject != null)
         {
             Transform nearestTransform = targets[0].transform;
 
@@ -133,7 +133,7 @@ public class EnemyController : CharacterController
                         nearestTransform = nextTransform;
                     }
                 }
-                
+
             }
             targetEnemy = nearestTransform.gameObject;
             return nearestTransform;

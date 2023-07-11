@@ -16,7 +16,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public Animator animator;
 
-    public float _totalScore=0;
+    public float _totalScore = 0;
 
     public int _power = 300;
 
@@ -58,7 +58,7 @@ public abstract class CharacterController : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag=="ground")
+        if (collision.gameObject.tag == "ground")
         {
             Death();
         }

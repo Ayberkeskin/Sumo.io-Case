@@ -19,7 +19,7 @@ public class TimeController : MonoBehaviour
         }
         if (timerOn)
         {
-            if (timeLeft>0)
+            if (timeLeft > 0)
             {
                 timeLeft -= Time.deltaTime;
                 updateTimer(timeLeft);
@@ -34,9 +34,9 @@ public class TimeController : MonoBehaviour
     void updateTimer(float time)
     {
         time -= 1;
-        float min = Mathf.FloorToInt(time/60);
-        float sec=Mathf.FloorToInt(time%60);
+        float min = Mathf.FloorToInt(time / 60);
+        float sec = Mathf.FloorToInt(time % 60);
 
-        timerText.text = string.Format("{0:00}:{1:00}",min,sec);
+        timerText.text = string.Format("{0:00}:{1:00}", min, sec);
     }
 }
