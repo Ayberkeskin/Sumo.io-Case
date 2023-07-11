@@ -55,7 +55,7 @@ public class EnemyController : CharacterController
         {
             animator.SetBool(CharacterAnimationsStrings.MoveStr, true);
             transform.Translate(Vector3.forward * characterData.MoveSpeed * Time.fixedDeltaTime);
-            if (gameObject.GetComponent<CharacterController>()._power> targetEnemy.GetComponent<CharacterController>()._power)
+            if (gameObject != null && gameObject.GetComponent<CharacterController>() != null && targetEnemy != null && gameObject.GetComponent<CharacterController>()._power> targetEnemy.GetComponent<CharacterController>()._power)
             {
                  look = new Vector3(targetEnemy.gameObject.transform.position.x, 0, targetEnemy.gameObject.transform.position.z);
                 
@@ -114,21 +114,31 @@ public class EnemyController : CharacterController
     }
     private Transform FindNearestEnemy(int count) 
     {
-        Transform nearestTransform = targets[0].transform;
-        for (int i = 1; i < count; i++)
+        if (targets[0].gameObject!=null)
         {
-            Transform nextTransform = targets[i].transform;
+            Transform nearestTransform = targets[0].transform;
 
-            float nearestTargetDistance = (modelTransform.position - nearestTransform.position).sqrMagnitude;
-            float nextTargetDistance = (modelTransform.position - nextTransform.position).sqrMagnitude;
-
-            if (nextTargetDistance < nearestTargetDistance)
+            for (int i = 1; i < count; i++)
             {
-                nearestTransform = nextTransform;
+                if (targets[i].gameObject != null)
+                {
+                    Transform nextTransform = targets[i].transform;
+
+                    float nearestTargetDistance = (modelTransform.position - nearestTransform.position).sqrMagnitude;
+                    float nextTargetDistance = (modelTransform.position - nextTransform.position).sqrMagnitude;
+
+                    if (nextTargetDistance < nearestTargetDistance)
+                    {
+                        nearestTransform = nextTransform;
+                    }
+                }
+                
             }
-        }
-            targetEnemy=nearestTransform.gameObject;
+            targetEnemy = nearestTransform.gameObject;
             return nearestTransform;
+
+        }
+        return null;
 
     }
 

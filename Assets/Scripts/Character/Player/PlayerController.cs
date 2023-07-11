@@ -8,7 +8,12 @@ public class PlayerController : CharacterController
 {
     [SerializeField] InputData ýnput;
     [SerializeField] GameManager _gameManager;
+    public float playerScore;
 
+    private void Update()
+    {
+        playerScore = gameObject.GetComponent<CharacterController>()._totalScore;
+    }
     protected override void Attack(Collision collision)
     {
         if (this.gameObject.GetComponent<CharacterController>()._power>collision.gameObject.GetComponent<CharacterController>()._power)
@@ -44,6 +49,7 @@ public class PlayerController : CharacterController
 
     protected override void Move()
     {
+        
         if (_gameManager.isStart)
         {
             animator.SetBool(CharacterAnimationsStrings.MoveStr,true);

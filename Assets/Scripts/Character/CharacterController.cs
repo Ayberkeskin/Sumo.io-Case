@@ -16,7 +16,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public Animator animator;
 
-    private float _totalScore=0;
+    public float _totalScore=0;
 
     public int _power = 300;
      
@@ -50,6 +50,17 @@ public abstract class CharacterController : MonoBehaviour
             _power = 900;
         }
     }
+    protected virtual void Death()
+    {
+        Destroy(gameObject);
 
-   
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag=="ground")
+        {
+            Death();
+        }
+    }
+
 }
