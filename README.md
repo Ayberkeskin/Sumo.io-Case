@@ -1,14 +1,15 @@
 # Sumo.io-Case
 
-Start Timte:  10.07.2023   17.00
+Start Time:  10.07.2023   17.00
 Finish Time : 11.07.2023   21.30(Videolar ve telefonumdan kaynaklı bir teknik sorun yüzünden süreç biraz uzadı proje bitiş saatim 21.30)
 
-Video Linkleri(Hangisini atiyim bilemedim riske atmamak için hem uzun hemde kısa link atmaya karar verim) :
+Video Linkleri(Hangisini atacağımı bilemediğin için riske atmak istemedim bu yüzden hem uzun hemde kısa link atmaya karar verdim) :
 PC: https://youtu.be/qxNF7CDYKEU
 TEL: https://youtu.be/GdQE-nPfqPU
 PC uzun link : https://www.youtube.com/watch?v=qxNF7CDYKEU
 Tel uzun link : https://www.youtube.com/watch?v=GdQE-nPfqPU
 
+Telefonumda Floating Joystick'in görünümünü bilerek açık bıraktım, böylece onu kullandığımı belli etmek istedim. Bilgisayarda ise görünümünü kapalı.
 Fotoğraflar :
 ![1](https://github.com/Ayberkeskin/Sumo.io-Case/assets/81094165/9ba6447a-11c6-4296-bc76-8a2bbd0666ef)
 
