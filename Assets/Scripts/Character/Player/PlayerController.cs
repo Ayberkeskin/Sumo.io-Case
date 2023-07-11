@@ -8,12 +8,20 @@ public class PlayerController : CharacterController
     [SerializeField] InputData ýnput;
     [SerializeField] GameManager _gameManager;
     [SerializeField] private CinemaMachineController cinemaMachineController;
+    public GameObject final;
     public float playerScore;
+
+
 
     private void Update()
     {
+        if (!gameObject.activeSelf)
+        {
+            Debug.Log("Objemiz yok edilmiþ.");
+        }
         playerScore = gameObject.GetComponent<CharacterController>()._totalScore;
     }
+
     protected override void Attack(Collision collision)
     {
         if (this.gameObject.GetComponent<CharacterController>()._power > collision.gameObject.GetComponent<CharacterController>()._power)
@@ -74,5 +82,6 @@ public class PlayerController : CharacterController
             Attack(collision);
         }
     }
+
 
 }

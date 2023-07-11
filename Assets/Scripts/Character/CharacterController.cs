@@ -65,6 +65,7 @@ public abstract class CharacterController : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
+            
             Death();
         }
     }

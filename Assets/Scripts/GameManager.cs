@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 
     public TimeController timeController;
 
-
-
+    public CharacterController characterController;
 
     public bool isStart;
 
@@ -24,21 +23,24 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        if (GameObject.Find("Player") == null)
+        {
+            isEnd = true;
+        }
         FinishGame();
-        Debug.Log(aliveCount);
     }
-
+  
     //Oyunu bitiren fonksiyon
     private void FinishGame()
     {
         if (aliveCount == 1 || timeController.timeLeft == 0)
         {
+        
             animator.SetBool(CharacterAnimationsStrings.MoveStr, false);
             animator.SetBool(CharacterAnimationsStrings.WinStr, true);
             isStart = false;
             timeController.timerOn = false;
             isEnd = true;
-
         }
 
     }

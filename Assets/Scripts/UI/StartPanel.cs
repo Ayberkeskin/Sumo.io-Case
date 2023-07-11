@@ -31,9 +31,10 @@ public class StartPanel : MonoBehaviour
 
         }
         countDownDisplay.text = "GO!";
-
+        yield return new WaitForSeconds(.2f);
         _gameManager.isStart = true;
         _startPanel.enabled = false;
+
         yield return new WaitForSeconds(1f);
 
         countDownDisplay.gameObject.SetActive(false);
