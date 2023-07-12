@@ -1,7 +1,7 @@
 # Sumo.io-Case
 
 Start Time:  10.07.2023   17.00
-Finish Time : 11.07.2023   21.30(Videolar ve telefonumdan kaynaklı bir teknik sorun yüzünden süreç biraz uzadı proje bitiş saatim 21.30)
+Finish Time : 11.07.2023   20.30(Videolar ve telefonumdan kaynaklı bir teknik sorun yüzünden süreç biraz uzadı proje bitiş saatim 20.30)
 
 Video Linkleri(Hangisini atacağımı bilemediğin için riske atmak istemedim bu yüzden hem uzun hemde kısa link atmaya karar verdim) :
 PC: https://youtu.be/qxNF7CDYKEU
